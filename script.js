@@ -1,10 +1,12 @@
 const form = {
+    form: document.getElementById("form"),
     email: document.getElementById("email"),
     country: document.getElementById("country"),
     zipcode: document.getElementById("zipCode"),
     password: document.getElementById("password"),
     passwordConfirmation: document.getElementById("passwordConfirmation"),
 }
+
 validateForm()
 function validateForm() {
     form.email.addEventListener("blur", validateEmail)
@@ -32,3 +34,9 @@ function validateForm() {
         }
     }
 }
+
+form.form.addEventListener("submit", e => {
+    const messages = []
+    // put logic to push error messages into messages
+    e.preventDefault()
+})
