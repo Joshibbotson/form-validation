@@ -12,6 +12,11 @@ label {
     color: rgb(111, 138, 162);
 }
 
+label::before {
+    content: "*";
+    color: firebrick;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -69,6 +74,10 @@ input[type="email"]:invalid {
 }
 
 .password:invalid {
+    background-color: rgba(255, 0, 0, 0.181);
+}
+
+.password-confirmation:invalid {
     background-color: rgba(255, 0, 0, 0.181);
 }
 
