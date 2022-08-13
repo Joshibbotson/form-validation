@@ -28,6 +28,8 @@ body {
     padding: 5rem;
     background-image: url(./images/japanStreet.jpg);
     background-size: cover;
+
+    transform: scale(0.5);
 }
 
 form {
@@ -60,4 +62,18 @@ button {
 
 input[type="email"]:invalid {
     background-color: rgba(255, 0, 0, 0.181);
+}
+
+.zip-code:invalid {
+    background-color: rgba(255, 0, 0, 0.181);
+}
+
+.password:invalid {
+    background-color: rgba(255, 0, 0, 0.181);
+}
+
+@media (min-width: 391px) {
+    .main-container {
+        transform: scale(1);
+    }
 }
