@@ -13,12 +13,17 @@
             <form novalidate id="form">
                 <div class="column-container">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="email" name="email" id="email" required />
                 </div>
                 <div class="column-container">
                     <label for="country">Country:</label>
                     <!--list of countries taken from https://gist.github.com/danrovito/977bcb97c9c2dfd3398a -->
-                    <select id="country" name="country" class="form-control">
+                    <select
+                        id="country"
+                        name="country"
+                        class="country"
+                        required
+                    >
                         <option disabled selected value>
                             -- select an option --
                         </option>
@@ -367,6 +372,7 @@
                         name="zip-code"
                         id="zipCode"
                         class="zip-code"
+                        required
                     />
                 </div>
                 <div class="column-container">
@@ -376,6 +382,7 @@
                         name="password"
                         id="password"
                         class="password"
+                        required
                     />
                 </div>
                 <div class="column-container">
@@ -385,6 +392,7 @@
                         name="password-confirmation"
                         id="passwordConfirmation"
                         class="password-confirmation"
+                        required
                     />
                 </div>
                 <button type="submit">submit</button>

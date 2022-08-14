@@ -6,6 +6,19 @@ const form = {
     password: document.getElementById("password"),
     passwordConfirmation: document.getElementById("passwordConfirmation"),
 }
+const inputArr = [
+    form.email,
+    form.country,
+    form.zipcode,
+    form.password,
+    form.passwordConfirmation,
+]
+
+inputArr.forEach(input => {
+    if (input.value === "") {
+        input.style.backgroundColor = "white"
+    }
+})
 
 function validateForm() {
     form.email.addEventListener("input", validateEmail)
@@ -23,6 +36,22 @@ function validateForm() {
     })
 
     function validateEmail() {
+        inputArr.forEach(input => {
+            if (input.value !== "") {
+                input.style.backgroundColor = ""
+            }
+        })
+
+        if (form.email.value === "") {
+            return (
+                form.email.setCustomValidity(
+                    "Please enter a valid email address"
+                ),
+                form.email.reportValidity(),
+                false
+            )
+        }
+
         if (form.email.validity.typeMismatch) {
             form.email.setCustomValidity("Please enter a valid email address")
             form.email.reportValidity()

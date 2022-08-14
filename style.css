@@ -69,16 +69,39 @@ input[type="email"]:invalid {
     background-color: rgba(255, 0, 0, 0.181);
 }
 
+input[type="email"]:valid {
+    background-color: rgba(162, 230, 162, 0.319);
+}
+
+.country:invalid {
+    background-color: rgba(255, 0, 0, 0.181);
+}
+.country:valid {
+    background-color: rgba(162, 230, 162, 0.319);
+}
+
 .zip-code:invalid {
     background-color: rgba(255, 0, 0, 0.181);
+}
+
+.zip-code:valid {
+    background-color: rgba(162, 230, 162, 0.319);
 }
 
 .password:invalid {
     background-color: rgba(255, 0, 0, 0.181);
 }
 
+.password:valid {
+    background-color: rgba(162, 230, 162, 0.319);
+}
+
 .password-confirmation:invalid {
     background-color: rgba(255, 0, 0, 0.181);
+}
+
+.password-confirmation:valid {
+    background-color: rgba(162, 230, 162, 0.319);
 }
 
 @media (min-width: 391px) {
